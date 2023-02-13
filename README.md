@@ -83,6 +83,10 @@ export 数组名;
 // 这里进行了重命名foo
 const { foo as otherName, bar }  from '../xx.js' 
 
+在 Node 项目里，包可以简单理解为模块的集合，一个包可以只提供一个模块的功能，也可以作为多个模块的集合集中管理。
+多个模块集合的就是范围包，具备 @scope/project-name 格式，一般有一系列相关的开发依赖之间会以相同的 scope 进行命名如 @vue/cli。单个模块的就是普通包如vue-router。
+包通常是发布在官方的包管理平台 npmjs 上面，开发者需要使用的时候，可以通过包管理器安装到项目里，并在的代码里引入，开箱即用。
+
 
 # 五、工程化之组件化
 模块化是属于 JavaScript 的概念,而一个页面除了JavaScript外还包括HTML和css。根据不同的需求和功能对页面也进行模块化的划分我们称之为组件化。
@@ -91,7 +95,8 @@ const { foo as otherName, bar }  from '../xx.js'
 每个组件也都有自己的 “作用域” ， JavaScript 部分利用 模块化 来实现作用域隔离， HTML 和 CSS 代码则借助 Style Scoped 来生成独有的 hash ，避免全局污染，这些方案组合起来，使得组件与组件之间的代码不会互相影响。
 
 那么如何实现组件化？
-在vue工程项目里是通过 Single-File Component （简称 SFC ， .vue 单文件组件）来实现组件化开发。
+在vue工程项目里是通过 Single-File Component （简称 SFC ， .vue 单文件组件）来实现组件化开发。也就是一个 .vue文件就是一个组件，它可以复用。
 
+# 六、工程化之规范化
 
-
+# 七、工程化之自动化
